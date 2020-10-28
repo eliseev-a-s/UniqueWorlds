@@ -16,7 +16,7 @@ public class HtmlParser {
      */
     public static void parseHtml(String html) {
 
-        List<String> words = Stream.of(html.split("[А-Яа-я]+"))
+        List<String> words = Stream.of(html.split("[^А-Яа-я]+"))
                 .map(String::toLowerCase)
                 .collect(Collectors.toList());
 
